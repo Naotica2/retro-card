@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.retro-font {
+font-family: 'Press Start 2P', cursive;
+}
+.pixel-border {
+position: relative;
+border: 4px solid #000;
+box-shadow:
+8px 8px 0 #000,
+inset 4px 4px 0 #fff,
+inset -4px -4px 0 #aaa;
+}
+.pixel-border::before {
+content: '';
+position: absolute;
+top: -8px;
+left: -8px;
+right: -8px;
+bottom: -8px;
+border: 2px solid #000;
+pointer-events: none;
+}
+.pixel-button {
+position: relative;
+border: 3px solid #000;
+box-shadow: 4px 4px 0 #000;
+transition: all 0.1s;
+}
+.pixel-button:active {
+transform: translate(2px, 2px);
+box-shadow: 2px 2px 0 #000;
+}
+.scanlines {
+position: relative;
+overflow: hidden;
+}
+.scanlines::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(
+to bottom,
+transparent 50%,
+rgba(0, 0, 0, 0.1) 51%
+);
+background-size: 100% 4px;
+pointer-events: none;
+}
+.pixel-art {
+image-rendering: pixelated;
+image-rendering: -moz-crisp-edges;
+image-rendering: crisp-edges;
+}
+@keyframes blink {
+0%, 100% { opacity: 1; }
+50% { opacity: 0.5; }
+}
+.blink {
+animation: blink 1s infinite;
+}
+@keyframes slow-blink {
+0%, 100% { opacity: 1; }
+50% { opacity: 0.3; }
+}
+.slow-blink {
+animation: slow-blink 2s infinite;
+}
+.popup-overlay {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.7);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.3s;
+}
+.popup-overlay.active {
+opacity: 1;
+pointer-events: all;
+}
+.popup-content {
+transform: scale(0.7);
+transition: transform 0.3s;
+}
+.popup-overlay.active .popup-content {
+transform: scale(1);
+}
+.loading-bar {
+height: 4px;
+background: linear-gradient(to right, #ff0, #f0f);
+width: 0%;
+transition: width 3s linear;
+}
+.loading-bar.active {
+width: 100%;
+}
+.crt-effect::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+background-size: 100% 2px, 3px 100%;
+pointer-events: none;
+}
+.crt-effect::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+background: rgba(18, 16, 16, 0.1);
+animation: flicker 0.15s infinite;
+pointer-events: none;
+}
+@keyframes flicker {
+0% { opacity: 0.1; }
+50% { opacity: 0.2; }
+100% { opacity: 0.1; }
+}
+.skill-bar {
+height: 12px;
+background-color: #333;
+border: 2px solid #000;
+position: relative;
+margin-bottom: 16px;
+}
+.skill-bar-fill {
+height: 100%;
+position: relative;
+background: repeating-linear-gradient(
+45deg,
+#ff0,
+#ff0 4px,
+#ff6 4px,
+#ff6 8px
+);
+border-right: 2px solid #000;
+}
+.skill-bar-fill::after {
+content: '';
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
+}
+.skill-label {
+position: absolute;
+top: -18px;
+left: 0;
+font-size: 10px;
+color: #fff;
+}
+.skill-percent {
+position: absolute;
+top: -18px;
+right: 0;
+font-size: 10px;
+color: #ff0;
+}
+body {
+background-color: #0d0c1d;
+background-image:
+url('image/bg.png'),
+linear-gradient(#1a1a2e 2px, transparent 2px),
+linear-gradient(90deg, #1a1a2e 2px, transparent 2px),
+linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+background-size: cover, 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+background-repeat: no-repeat, repeat, repeat, repeat, repeat;
+background-position: center, -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+background-attachment: fixed;
+}
+.game-film-card {
+flex-shrink: 0;
+width: 80px;
+height: 100px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 8px;
+font-size: 10px;
+line-height: 1.2;
+}

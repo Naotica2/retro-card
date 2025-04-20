@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naoxxxxxxxxxxxxxxxxxxx19 Card</title>
+<meta name="description" content="Retro Game Card by Naotica"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 retro-font">
+<div class="absolute inset-0 bg-black/40 -z-10"></div>
+<div class="w-full max-w-md mx-auto">
+<div class="pixel-border bg-purple-900 p-6 text-white relative">
+<div class="flex justify-between items-center mb-6">
+<h1 class="text-2xl md:text-3xl text-yellow-300">mY PROFILE</h1>
+<div class="text-xs bg-red px-2 py-1">SETTING</div>
+</div>
+<div class="scanlines bg-black mb-6 relative h-56 overflow-hidden crt-effect">
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4">
+<div class="w-24 h-24 bg-blue-500 mb-4 relative pixel-art"><img src="image/profile.png" alt="Profile" class="w-full h-full object-cover" />
+</div>
+<div class="text-center">
+<div class="text-yellow-300 text-lg mb-2">Naotica</div>
+<div class="text-sm">LEVEL: 50</div>
+</div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20"></div>
+</div>
+<div class="mb-6">
+<div class="skill-bar">
+<div class="skill-label">HTML/CSS</div>
+<div class="skill-percent">90%</div>
+<div class="skill-bar-fill" style="width: 90%"></div>
+</div>
+<div class="skill-bar">
+<div class="skill-label">PHP</div>
+<div class="skill-percent">75%</div>
+<div class="skill-bar-fill" style="width: 75%"></div>
+</div>
+<div class="skill-bar">
+<div class="skill-label">JAVASCRIPT</div>
+<div class="skill-percent">60%</div>
+<div class="skill-bar-fill" style="width: 60%"></div>
+</div>
+</div>
+<div class="flex justify-center">
+<button id="viewProfileBtn" class="pixel-button bg-yellow-500 px-8 py-3 text-sm hover:bg-yellow-400">
+START
+</button>
+</div>
+<div class="text-center text-xs mt-6 text-gray-400 slow-blink">
+PRESS START TO CONTINUE
+</div>
+<div class="flex justify-between mt-4">
+<div class="w-12 h-3 bg-gray-800"></div>
+<div class="w-12 h-3 bg-gray-800"></div>
+</div>
+</div>
+<div id="popupOverlay" class="popup-overlay">
+<div class="popup-content w-full max-w-lg px-4">
+<div id="loadingScreen" class="pixel-border bg-blue-900 p-6 text-white">
+<div class="text-center mb-6">
+<div class="text-1xl text-yellow-300 mb-5">DOWNLOAD REQUIRMENTS...</div>
+<div class="loading-bar h-3 bg-gray-700 mb-6">
+<div id="loadingBar" class="loading-bar"></div>
+</div>
+<div class="text-sm">PLEASE WAIT</div>
+</div>
+<div class="scanlines bg-black h-32 mb-6 relative crt-effect">
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center">
+<div class="blink text-base">>> INITIALIZING <<</div>
+<div class="text-sm mt-4">LOADING ASSETS...</div>
+</div>
+</div>
+</div>
+<div class="text-center text-sm text-gray-400">
+© Naotica
+</div>
+</div>
+<div id="profileContent" class="pixel-border bg-purple-900 p-6 text-white hidden">
+<div class="flex justify-end mb-4">
+<button id="closePopupBtn" class="pixel-button bg-red-500 w-8 h-8 flex items-center justify-center text-sm">
+X
+</button>
+</div>
+<div class="flex items-center mb-6">
+<div class="w-20 h-20 bg-blue-500 mr-6 relative pixel-art"><img src="image/profile.png" alt="Profile" class="w-full h-full object-cover" />
+</div>
+<div>
+<div class="text-yellow-300 text-xl">Naotica</div>
+<div class="text-sm text-gray-400">SIKMA DEV</div>
+<div class="text-sm mt-2">
+<span class="text-green-400">ONLINE</span>
+<span class="mx-2">|</span>
+<span>LEVEL 50</span>
+</div>
+</div>
+</div>
+<div class="bg-black p-4 mb-6">
+<div class="text-sm text-gray-400 mb-5"> TECH USE:</div>
+<div class="skill-bar">
+<div class="skill-label">HTML/CSS</div>
+<div class="skill-percent">90%</div>
+<div class="skill-bar-fill" style="width: 90%"></div>
+</div>
+<div class="skill-bar">
+<div class="skill-label">PHP</div>
+<div class="skill-percent">75%</div>
+<div class="skill-bar-fill" style="width: 75%"></div>
+</div>
+<div class="skill-bar">
+<div class="skill-label">JAVASCRIPT</div>
+<div class="skill-percent">60%</div>
+<div class="skill-bar-fill" style="width: 60%"></div>
+</div>
+</div>
+<div class="bg-black p-4 mb-6 text-sm">
+<div class="text-gray-400 mb-2">BIO:</div>
+<div>"Each life is made up of mistakes and learning, waiting and growing, practicing patience and being persistent."</div>
+</div>
+<div class="mb-6">
+<div class="text-sm text-gray-400 mb-3">CONNECT:</div>
+<div class="grid grid-cols-4 gap-3">
+<a href="https://github.com/Naotica2" class="pixel-button bg-gray-600 flex items-center justify-center p-3 text-white">
+<i class="fab fa-github"></i>
+</a>
+<a href="https://www.youtube.com/@Naoticaceha" class="pixel-button bg-red-800 flex items-center justify-center p-3 text-white">
+<i class="fab fa-youtube"></i>
+</a>
+<a href="https://www.instagram.com/for_evershya10" class="pixel-button bg-pink-600 flex items-center justify-center p-3 text-white">
+<i class="fab fa-instagram"></i>
+</a>
+</a>
+</div>
+</div>
+<div class="mb-6">
+<div class="text-sm text-yellow-400 mb-3 tracking-wider font-bold">
+FAVORITE GAME & SHOWS:
+</div>
+<div class="flex justify-between gap-2">
+<div class="flex flex-col items-center w-20">
+<div class="game-film-card pixel-border overflow-hidden bg-black p-0">
+<img src="image/minecraft.png" alt="Minecraft" class="w-full h-full object-cover" />
+</div>
+<div class="text-[9px] text-center mt-1 text-white font-semibold">MINECRAFT</div>
+</div>
+<div class="flex flex-col items-center w-20">
+<div class="game-film-card pixel-border overflow-hidden bg-black p-0">
+<img src="image/strangerthings.png" alt="Stranger Things" class="w-full h-full object-cover" />
+</div>
+<div class="text-[9px] text-center mt-1 text-white font-semibold leading-tight">
+STRANGER<br>THINGS
+</div>
+</div>
+<div class="flex flex-col items-center w-20">
+<div class="game-film-card pixel-border overflow-hidden bg-black p-0">
+<img src="image/kon.png" alt="K-ON" class="w-full h-full object-cover" />
+</div>
+<div class="text-[9px] text-center mt-1 text-white font-semibold">K-ON</div>
+</div>
+</div>
+</div>
+<div class="text-center text-sm text-gray-400">
+end... lanjut scroll pesnuk
+</div>
+</div>
+<audio id="song" loop>
+<source src="mp3/song.mp3" type="audio/mpeg">
+</audio>
+</div>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
